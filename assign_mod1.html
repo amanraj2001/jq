@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <button>Dropdown</button>
+    <br>
+    <div id="dropdownlist"></div>
+    <p id="demo"></p>
+    <script>
+
+        var country = ["India", "United Kingdom", "U.S.A", "Australia", "Cambodia"]
+
+        $(document).ready(function () {
+            $('button').click(function () {
+
+                $('#dropdownlist').html(
+                    $(document.createElement('select')).prop({
+                        id: 'drop',
+
+                    })
+
+                )
+                for (var i = 0; i < country.length; i++) {
+                    $('#drop').append($(document.createElement('option')).prop({
+                        text: country[i]
+
+                    }))
+                }
+
+            });
+            
+            $("select").change(function () {
+                alert("gg")
+            });
+
+        })
+    </script>
+</body>
+
+</html>

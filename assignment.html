@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+</head>
+<body>
+    <select name="" id="select" onchange="sel()">
+
+    </select>
+    <p id="demo"></p>
+
+    <script>
+       var country = ["Please select", "India", "United Kingdom", "U.S.A", "Australia", "Cambodia"]
+        $(document).ready(function () {
+            for (var i = 0; i < country.length; i++) {
+                $('#select').append($(document.createElement('option')).prop({
+                    text: country[i]
+
+                }))
+
+            }
+        })
+        var x = ""
+        for(var j = 0;j<country.length;j++){
+            x+=`<br>${country[j]}</br>`
+        }
+        $('#demo').html(x)
+
+        function sel(){
+            var t = $("select option:selected").text()
+            console.log(t)
+            if(t==="Please select"){
+                $("#demo").html(`your selected country is :${x}`)
+            }
+            else{
+                $("#demo").html(t)
+            }
+        }
+    </script>
+</body>
+</html>

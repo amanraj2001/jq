@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <label for="rad" class="t">Please select technology</label>
+        <div>
+            <label for="php">PHP</label>
+            <input type="radio" id="php" name="tech">
+
+
+            <label for="aspnet">ASP.NET</label>
+            <input type="radio" id="aspnet" name="tech">
+
+
+            <label for="asp">ASP</label>
+            <input type="radio" id="asp" name="tech">
+
+
+            <label for="jsp">JSP</label>
+            <input type="radio" id="jsp" name="tech">
+
+
+            <label for="perl">PERL</label>
+            <input type="radio" id="perl" name="tech">
+
+            <label for="cold">Cold Fusion</label>
+            <input type="radio" id="cold" name="tech">
+            <label for="other">Others</label>
+            <input type="radio" id="other" name="tech">
+
+
+
+        </div>
+        <span id="or1"><label for="or1"></label></span>
+        <span id="or2"><label for="or2"></label></span>
+        <span id="or3"><label for="or3"></label></span>
+        <span id="or4"><label for="or3"></label></span>
+        <span id="or5"><label for="or3"></label></span>
+        <span id="or6"><label for="or3"></label></span>
+        <span id="or7"><label for="or3"></label></span>
+        <span id="or8"><label for="or3"></label></span>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            var x = "you have selected:";
+
+            $("#php").click(function () {
+                $("#or1").html(x + "<b>PHP</b>")
+                $("span").not("#or1").empty()
+            });
+            $("#aspnet").click(function () {
+                $("#or2").text(x + " ASP.NET")
+                $("span").not("#or2").empty();
+            });
+            $("#asp").click(function () {
+                $("#or3").html(x + "<b>ASP</b>")
+                $("span").not("#or3").empty();
+
+            });
+            $("#jsp").click(function () {
+                $("#or4").html(x + "<b>JSP</b>")
+                $("span").not("#or4").empty();
+
+            });
+            $("#jsp").click(function () {
+                $("#or5").html(x + "<b>JSP</b>")
+                $("span").not("#or5").empty();
+
+            });
+            $("#perl").click(function () {
+                $("#or6").html(x + "<b>PERL</b>")
+                $("span").not("#or6").empty();
+
+            });
+            $("#cold").click(function () {
+                $("#or7").html(x + "<b>cold fusion</b>")
+                $("span").not("#or7").empty();
+
+            });
+            $("#other").click(function () {
+                $("#or8").html(x + "<b>other</b>")
+                $("span").not("#or8").empty();
+
+            });
+        })
+    </script>
+</body>
+
+</html>
